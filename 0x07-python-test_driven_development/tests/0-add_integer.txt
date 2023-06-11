@@ -1,13 +1,13 @@
-==================================================
+===========================
 How to Use 0-add_integer.py
-==================================================
+===========================
 
-This module defines addition of an integer function ``add_integer(x, y=98)``.
+This module defines an integer addition function ``add_integer(x, y=98)``.
 
-Usage of function
-===================================================
+Usage
+================================
 
-``add_integer(arg1, arg2=default)``` returns addition of the two arguments. Example for numbers,
+``add_integer(...)``` returns the addition of the two arguments. For numbers,
 that value is equivalent to using the ``+`` operator.
 
 ::
@@ -21,14 +21,14 @@ that value is equivalent to using the ``+`` operator.
     >>> add_integer(2, -3)
     -1
 
-The function works also with floating values. An Example for floating values
+The function also works with floating-point values.
 
 ::
 
     >>> add_integer(2.0, 3.0)
     5
 
-You should note that floats are converted into integers before addition.
+Note that floats are casted to integers before addition.
 
 ::
 
@@ -40,7 +40,7 @@ You should note that floats are converted into integers before addition.
     >>> add_integer(-2.9, -0.2)
     -2
 
-Floating and non-floating values also can be combined.
+Floating and non-floating point values can be combined.
 
 ::
 
@@ -54,10 +54,10 @@ The second argument is optional - by default, it is 98.
     >>> add_integer(2)
     100
 
-For Non-Numbers
-==========================================
+Non-Numbers
+===========
 
-``add_integer()`` expects that both arguments are numbers either they are integers or floats or both.
+``add_integer()`` expects that both arguments are either integers or floats.
 If either argument is x non-integer and non-float, x TypeError is raised:
 
 ::
