@@ -6,7 +6,7 @@ def is_same_class(object, a_class):
     """Check if an objectect is exactly an instance of a given class.
 
     Args:
-        object (any): The objectect to check.
+        object (any): The object to check.
         a_class (type): The class to match the type of object to.
     Returns:
         If object is exactly an instance of a_class - True.
