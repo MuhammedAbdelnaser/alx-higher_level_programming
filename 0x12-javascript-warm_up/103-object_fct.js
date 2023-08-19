@@ -5,9 +5,9 @@ const myObject = {
 };
 console.log(myObject);
 
-myObject.incr = function Function() {
-  return ++this.value
-}
+myObject.incr = function () {
+  return this.value++;
+};
 
 myObject.incr();
 console.log(myObject);
