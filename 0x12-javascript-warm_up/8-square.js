@@ -1,4 +1,9 @@
 #!/usr/bin/node
-const argSize = Number(process.argv[2]);
+const argSize = Number(process.argv[2])
 
-console.log(argSize ? 'X'.repeat(argSize) : 'Missing size');
+if (Number(argSize)) {
+  for (let i = 0; i < argSize; i++)
+    console.log('X'.repeat(argSize));
+} else {
+  console.log('Missing size');
+}
