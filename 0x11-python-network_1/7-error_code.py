@@ -4,11 +4,12 @@
 - sends a request to the URL
 - displays the body of the response.
 """
-import sys
-import requests
 
 
 if __name__ == "__main__":
+    import sys
+    import requests
+    
     url = sys.argv[1]
 
     r = requests.get(url)
