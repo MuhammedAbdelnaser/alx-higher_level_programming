@@ -6,12 +6,18 @@
 """
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
+    import urllib.request
     import sys
-    from urllib import request, error
+    from urllib.error import HTTPError
+
+    url = sys.argv[1]
+    req = urllib.request.Request(url)
 
     try:
-        with request.urlopen(sys.argv[1]) as res:
-            print(res.read().decode('UTF-8'))
-    except error.HTTPError as er:
-        print('Error code:', er.code)
+        with urllib.request.urlopen(req) as response:
+            page = response.read()
+    except HTTPError as e:
+        print("Error code: {}".format(e.code))
+    else:
+        print(page.decode('utf-8'))
